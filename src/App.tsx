@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { LoginForm } from './components/auth/LoginForm';
 import { SignupForm } from './components/auth/SignupForm';
@@ -11,12 +11,21 @@ function AuthenticatedApp() {
   const { user, loading } = useAuth();
   const [currentView, setCurrentView] = useState<View>('landing');
 
+  // Reset to landing page when user logs out
+  useEffect(() => {
+    if (!user && !loading) {
+      setCurrentView('landing');
+    }
+  }, [user, loading]);
+
+  console.log('App state:', { user: !!user, loading, currentView });
+
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/20 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-block w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-          <p className="text-gray-600 mt-4">Loading...</p>
+          <div className="inline-block w-12 h-12 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-slate-600 mt-4 font-medium">Loading...</p>
         </div>
       </div>
     );
@@ -33,7 +42,7 @@ function AuthenticatedApp() {
     }
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 flex items-center justify-center py-12 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/20 flex items-center justify-center py-12 px-4">
         {currentView === 'login' ? (
           <LoginForm onToggleForm={() => setCurrentView('signup')} />
         ) : (

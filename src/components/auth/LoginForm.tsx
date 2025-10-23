@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { LogIn } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 
 interface LoginFormProps {
   onToggleForm: () => void;
@@ -28,21 +28,24 @@ export function LoginForm({ onToggleForm }: LoginFormProps) {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <div className="bg-white rounded-lg shadow-lg p-8">
-        <div className="flex items-center justify-center mb-6">
-          <LogIn className="w-8 h-8 text-blue-600 mr-2" />
-          <h2 className="text-2xl font-bold text-gray-900">Sign In to PAZZLE</h2>
+      <div className="bg-white rounded-2xl shadow-xl border border-slate-200 p-8">
+        <div className="flex flex-col items-center justify-center mb-8">
+          <div className="bg-gradient-to-br from-emerald-600 to-teal-600 p-3 rounded-xl mb-4">
+            <Briefcase className="w-8 h-8 text-white" />
+          </div>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">Sign In to PAZZLE</h2>
+          <p className="text-slate-600 text-sm mt-2">Access your employer dashboard</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {error && (
-            <div className="p-3 bg-red-50 border border-red-200 rounded-md text-red-700 text-sm">
+            <div className="p-4 bg-red-50 border-2 border-red-200 rounded-xl text-red-700 text-sm font-medium">
               {error}
             </div>
           )}
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
               Email Address
             </label>
             <input
@@ -51,13 +54,13 @@ export function LoginForm({ onToggleForm }: LoginFormProps) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-700 placeholder-slate-400"
               placeholder="employer@company.com"
             />
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="password" className="block text-sm font-semibold text-slate-700 mb-2">
               Password
             </label>
             <input
@@ -66,7 +69,7 @@ export function LoginForm({ onToggleForm }: LoginFormProps) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-700 placeholder-slate-400"
               placeholder="••••••••"
             />
           </div>
@@ -74,18 +77,18 @@ export function LoginForm({ onToggleForm }: LoginFormProps) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+            className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-4 px-4 rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed font-semibold text-lg shadow-lg hover:shadow-xl"
           >
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
 
         <div className="mt-6 text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-slate-600">
             Don't have an account?{' '}
             <button
               onClick={onToggleForm}
-              className="text-blue-600 hover:text-blue-700 font-medium"
+              className="text-emerald-600 hover:text-emerald-700 font-semibold"
             >
               Sign up
             </button>

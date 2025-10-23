@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { UserPlus } from 'lucide-react';
+import { UserPlus, Briefcase } from 'lucide-react';
 
 interface SignupFormProps {
   onToggleForm: () => void;
@@ -56,18 +56,18 @@ export function SignupForm({ onToggleForm }: SignupFormProps) {
   if (success) {
     return (
       <div className="w-full max-w-md mx-auto">
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-white rounded-2xl shadow-xl border border-slate-200 p-8">
           <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <UserPlus className="w-8 h-8 text-green-600" />
+            <div className="w-20 h-20 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-full flex items-center justify-center mx-auto mb-4 ring-4 ring-emerald-200">
+              <UserPlus className="w-10 h-10 text-emerald-600" />
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Account Created!</h2>
-            <p className="text-gray-600 mb-6">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent mb-3">Account Created!</h2>
+            <p className="text-slate-600 mb-6 font-medium">
               Your employer account has been successfully created. You can now access the dashboard.
             </p>
             <button
               onClick={onToggleForm}
-              className="text-blue-600 hover:text-blue-700 font-medium"
+              className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-3 rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all font-semibold shadow-lg hover:shadow-xl"
             >
               Go to Sign In
             </button>
@@ -79,21 +79,24 @@ export function SignupForm({ onToggleForm }: SignupFormProps) {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <div className="bg-white rounded-lg shadow-lg p-8">
-        <div className="flex items-center justify-center mb-6">
-          <UserPlus className="w-8 h-8 text-blue-600 mr-2" />
-          <h2 className="text-2xl font-bold text-gray-900">Create Employer Account</h2>
+      <div className="bg-white rounded-2xl shadow-xl border border-slate-200 p-8">
+        <div className="flex flex-col items-center justify-center mb-8">
+          <div className="bg-gradient-to-br from-emerald-600 to-teal-600 p-3 rounded-xl mb-4">
+            <Briefcase className="w-8 h-8 text-white" />
+          </div>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">Create Employer Account</h2>
+          <p className="text-slate-600 text-sm mt-2">Start hiring verified workers today</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {error && (
-            <div className="p-3 bg-red-50 border border-red-200 rounded-md text-red-700 text-sm">
+            <div className="p-4 bg-red-50 border-2 border-red-200 rounded-xl text-red-700 text-sm font-medium">
               {error}
             </div>
           )}
 
           <div>
-            <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="companyName" className="block text-sm font-semibold text-slate-700 mb-2">
               Company Name
             </label>
             <input
@@ -102,13 +105,13 @@ export function SignupForm({ onToggleForm }: SignupFormProps) {
               value={formData.companyName}
               onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-700 placeholder-slate-400"
               placeholder="ABC Company"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
               Email Address
             </label>
             <input
@@ -117,13 +120,13 @@ export function SignupForm({ onToggleForm }: SignupFormProps) {
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-700 placeholder-slate-400"
               placeholder="you@company.com"
             />
           </div>
 
           <div>
-            <label htmlFor="contactEmail" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="contactEmail" className="block text-sm font-semibold text-slate-700 mb-2">
               Company Contact Email
             </label>
             <input
@@ -132,13 +135,13 @@ export function SignupForm({ onToggleForm }: SignupFormProps) {
               value={formData.contactEmail}
               onChange={(e) => setFormData({ ...formData, contactEmail: e.target.value })}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-700 placeholder-slate-400"
               placeholder="contact@company.com"
             />
           </div>
 
           <div>
-            <label htmlFor="contactPhone" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="contactPhone" className="block text-sm font-semibold text-slate-700 mb-2">
               Company Phone (Optional)
             </label>
             <input
@@ -146,20 +149,20 @@ export function SignupForm({ onToggleForm }: SignupFormProps) {
               type="tel"
               value={formData.contactPhone}
               onChange={(e) => setFormData({ ...formData, contactPhone: e.target.value })}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-700 placeholder-slate-400"
               placeholder="+1234567890"
             />
           </div>
 
           <div>
-            <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="role" className="block text-sm font-semibold text-slate-700 mb-2">
               Role
             </label>
             <select
               id="role"
               value={formData.role}
               onChange={(e) => setFormData({ ...formData, role: e.target.value as any })}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-700 bg-white"
             >
               <option value="recruiter">Recruiter</option>
               <option value="admin">Admin</option>
@@ -168,7 +171,7 @@ export function SignupForm({ onToggleForm }: SignupFormProps) {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="password" className="block text-sm font-semibold text-slate-700 mb-2">
               Password
             </label>
             <input
@@ -177,13 +180,13 @@ export function SignupForm({ onToggleForm }: SignupFormProps) {
               value={formData.password}
               onChange={(e) => setFormData({ ...formData, password: e.target.value })}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-700 placeholder-slate-400"
               placeholder="••••••••"
             />
           </div>
 
           <div>
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="confirmPassword" className="block text-sm font-semibold text-slate-700 mb-2">
               Confirm Password
             </label>
             <input
@@ -192,7 +195,7 @@ export function SignupForm({ onToggleForm }: SignupFormProps) {
               value={formData.confirmPassword}
               onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-700 placeholder-slate-400"
               placeholder="••••••••"
             />
           </div>
@@ -200,18 +203,18 @@ export function SignupForm({ onToggleForm }: SignupFormProps) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+            className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-4 px-4 rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed font-semibold text-lg shadow-lg hover:shadow-xl mt-2"
           >
             {loading ? 'Creating Account...' : 'Create Account'}
           </button>
         </form>
 
         <div className="mt-6 text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-slate-600">
             Already have an account?{' '}
             <button
               onClick={onToggleForm}
-              className="text-blue-600 hover:text-blue-700 font-medium"
+              className="text-emerald-600 hover:text-emerald-700 font-semibold"
             >
               Sign in
             </button>
