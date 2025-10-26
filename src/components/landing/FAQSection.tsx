@@ -28,7 +28,15 @@ export function FAQSection() {
         .order('display_order');
 
       if (error) throw error;
-      setFaqs(data || []);
+      
+      // Replace PAZZLE with REINFORCED in FAQ content
+      const rebrandedFaqs = (data || []).map(faq => ({
+        ...faq,
+        question: faq.question.replace(/PAZZLE/g, 'REINFORCED'),
+        answer: faq.answer.replace(/PAZZLE/g, 'REINFORCED')
+      }));
+      
+      setFaqs(rebrandedFaqs);
     } catch (error) {
       console.error('Error loading FAQs:', error);
     } finally {
@@ -60,7 +68,7 @@ export function FAQSection() {
           </div>
           <h2 className="text-4xl font-bold text-slate-900 mb-4">Got Questions? We Have Answers</h2>
           <p className="text-xl text-slate-600">
-            Everything you need to know about PAZZLE and how we connect you with verified workers
+            Everything you need to know about REINFORCED - Workforce you trust and how we connect you with verified workers
           </p>
         </div>
 

@@ -137,7 +137,10 @@ export function Dashboard() {
                 <Briefcase className="h-7 w-7 text-white" />
               </div>
               <div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">PAZZLE</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">REINFORCED</span>
+                  <span className="text-xs text-slate-500 font-medium">Workforce you trust</span>
+                </div>
                 <p className="text-xs text-slate-600">{employer?.company_name}</p>
               </div>
             </div>

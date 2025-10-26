@@ -33,8 +33,8 @@ export function LoginForm({ onToggleForm }: LoginFormProps) {
           <div className="bg-gradient-to-br from-emerald-600 to-teal-600 p-3 rounded-xl mb-4">
             <Briefcase className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">Sign In to PAZZLE</h2>
-          <p className="text-slate-600 text-sm mt-2">Access your employer dashboard</p>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">Sign In to REINFORCED</h2>
+          <p className="text-slate-600 text-sm mt-2">Workforce you trust - Access your employer dashboard</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">

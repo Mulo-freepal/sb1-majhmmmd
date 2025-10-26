@@ -93,7 +93,10 @@ export function LandingPage({ onNavigateToLogin, onNavigateToSignup }: LandingPa
               <div className="bg-gradient-to-br from-emerald-600 to-teal-600 p-2 rounded-lg">
                 <Briefcase className="h-7 w-7 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">PAZZLE</span>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">REINFORCED</span>
+                <span className="text-xs text-slate-600 font-medium">Workforce you trust</span>
+              </div>
             </div>
             <div className="flex items-center space-x-6">
               <button
@@ -167,7 +170,8 @@ export function LandingPage({ onNavigateToLogin, onNavigateToSignup }: LandingPa
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Why PAZZLE Stands Apart</h2>
+            <h2 className="text-4xl font-bold mb-4">Why REINFORCED Stands Apart</h2>
+            <p className="text-sm text-emerald-200 font-semibold mb-2">Workforce you trust</p>
             <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
               The only platform designed specifically for the German market with individually verified workers
             </p>
@@ -209,7 +213,7 @@ export function LandingPage({ onNavigateToLogin, onNavigateToSignup }: LandingPa
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Comprehensive Training & Certification</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Every worker completes rigorous training programs before joining PAZZLE
+              Every worker completes rigorous training programs before joining REINFORCED
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -488,7 +492,10 @@ export function LandingPage({ onNavigateToLogin, onNavigateToSignup }: LandingPa
                 <div className="bg-gradient-to-br from-emerald-600 to-teal-600 p-2 rounded-lg">
                   <Briefcase className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-xl font-bold text-white">PAZZLE</span>
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold text-white">REINFORCED</span>
+                  <span className="text-xs text-slate-400">Workforce you trust</span>
+                </div>
               </div>
               <p className="text-sm text-slate-500 leading-relaxed">
                 Connecting German employers with verified, trained workers ready to contribute.
@@ -523,7 +530,7 @@ export function LandingPage({ onNavigateToLogin, onNavigateToSignup }: LandingPa
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-center text-sm">
-            <p>&copy; 2025 PAZZLE. All rights reserved. Connecting verified workers with German employers.</p>
+            <p>&copy; 2025 REINFORCED - Workforce you trust. All rights reserved. Connecting verified workers with German employers.</p>
           </div>
         </div>
       </footer>

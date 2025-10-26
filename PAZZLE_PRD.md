@@ -1,8 +1,11 @@
-# Product Requirements Document (PRD): PAZZLE
+# Product Requirements Document (PRD): REINFORCED
+
+## Tagline
+**Workforce you trust**
 
 ## 1. Overview
 
-PAZZLE is a platform that connects employers with workers through a
+REINFORCED is a platform that connects employers with workers through a
 structured, data-driven system. Employers can search, review, and manage
 worker profiles with detailed background information. Workers have
 comprehensive profiles with personal details, experience, language
