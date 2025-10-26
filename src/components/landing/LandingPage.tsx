@@ -126,10 +126,10 @@ export function LandingPage({ onNavigateToLogin, onNavigateToSignup }: LandingPa
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight">
               Hire Verified Workers
-              <span className="block bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Trained for German Standards</span>
+              <span className="block bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Ready or Trainable for German Standards</span>
             </h1>
             <p className="text-xl sm:text-2xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Connect with individually verified workers equipped with German language skills and industrial certifications. No family complications, just skilled professionals ready to contribute.
+              Connect with individually verified workers with German language skills and industrial certifications. Request additional training and certification to meet your specific requirements. No family complications, just skilled professionals ready to contribute.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
               <button
@@ -155,8 +155,8 @@ export function LandingPage({ onNavigateToLogin, onNavigateToSignup }: LandingPa
                 <div className="text-slate-600 font-medium">Specializations</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                <div className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">100%</div>
-                <div className="text-slate-600 font-medium">German Trained</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">Trained+</div>
+                <div className="text-slate-600 font-medium">German Qualified</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                 <div className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">98%</div>
@@ -192,7 +192,7 @@ export function LandingPage({ onNavigateToLogin, onNavigateToSignup }: LandingPa
               </div>
               <h3 className="text-2xl font-bold mb-3">German Standards Training</h3>
               <p className="text-emerald-100 leading-relaxed">
-                All workers complete comprehensive German language courses and industry-specific training aligned with German industrial standards before joining the platform.
+                Workers complete comprehensive German language courses and industry-specific training. Employers can request additional certification to meet specific requirements, enhancing worker qualifications.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20">
@@ -213,8 +213,42 @@ export function LandingPage({ onNavigateToLogin, onNavigateToSignup }: LandingPa
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Comprehensive Training & Certification</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Every worker completes rigorous training programs before joining REINFORCED
+              Workers complete rigorous training programs before joining REINFORCED. Employers can request additional language training or industry certifications to meet specific job requirements.
             </p>
+          </div>
+          <div className="mb-12">
+            <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-xl p-8">
+              <div className="flex items-start space-x-4">
+                <div className="bg-emerald-600 p-3 rounded-lg flex-shrink-0">
+                  <BookOpen className="h-6 w-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">Request Custom Training</h3>
+                  <p className="text-slate-700 mb-4">
+                    Found a great worker but need specific skills or certifications? We can coordinate additional German language training (A1-B2) or industry-specific certifications upon your request. Workers invest in their own development to enhance their employability and meet your exact requirements.
+                  </p>
+                  <ul className="flex flex-wrap gap-3 text-sm">
+                    <span className="font-semibold text-slate-900">Available training options:</span>
+                    <li className="flex items-center space-x-2 text-slate-700">
+                      <span className="text-emerald-600">✓</span>
+                      <span>German language training (all levels)</span>
+                    </li>
+                    <li className="flex items-center space-x-2 text-slate-700">
+                      <span className="text-emerald-600">✓</span>
+                      <span>Industrial safety certifications</span>
+                    </li>
+                    <li className="flex items-center space-x-2 text-slate-700">
+                      <span className="text-emerald-600">✓</span>
+                      <span>Technical skills certification</span>
+                    </li>
+                    <li className="flex items-center space-x-2 text-slate-700">
+                      <span className="text-emerald-600">✓</span>
+                      <span>Professional standards training</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
@@ -359,7 +393,7 @@ export function LandingPage({ onNavigateToLogin, onNavigateToSignup }: LandingPa
                   <Search className="h-6 w-6 text-teal-600" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Search & Review</h3>
-                <p className="text-slate-600">Browse comprehensive profiles with verified credentials, certifications, language skills, and work experience.</p>
+                <p className="text-slate-600">Browse comprehensive profiles with verified credentials, certifications, language skills, and work experience. Request additional training or certification if needed.</p>
               </div>
             </div>
             <div className="relative">
